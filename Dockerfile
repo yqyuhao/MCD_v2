@@ -88,11 +88,11 @@ RUN wget -c https://nchc.dl.sourceforge.net/project/snpeff/snpEff_v4_3t_core.zip
 
 # Annovar 2017-07-17
 WORKDIR $software/source
-RUN git clone http://github.com/yqyuhao/MCD_v2.git && cd MCD && unzip annovar_2017-07-17.zip && cd annovar && cp *.pl $software/bin
+RUN git clone http://github.com/yqyuhao/MCD_v2.git && cd MCD_v2 && unzip annovar_2017-07-17.zip && cd annovar && cp *.pl $software/bin
 
 # copy esssential files
 WORKDIR $software/source
-RUN cd MCD && cp fastq2stat.pl api_baopi-post.py MCD_baopi_simple_v2 $software/bin/ && cp T554V1.bed $software/target/
+RUN cd MCD_v2 && cp fastq2stat.pl api_baopi-post.py MCD_baopi_simple_v2 $software/bin/ && cp T554V1.bed $software/target/
 
 # install essential packages
 WORKDIR $software/source
