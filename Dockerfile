@@ -88,7 +88,7 @@ RUN wget -c https://nchc.dl.sourceforge.net/project/snpeff/snpEff_v4_3t_core.zip
 
 # Annovar 2017-07-17
 WORKDIR $software/source
-RUN git clone http://github.com/yqyuhao/MCD.git && cd MCD && unzip annovar_2017-07-17.zip && cd annovar && cp *.pl $software/bin
+RUN git clone http://github.com/yqyuhao/MCD_v2.git && cd MCD && unzip annovar_2017-07-17.zip && cd annovar && cp *.pl $software/bin
 
 # copy esssential files
 WORKDIR $software/source
